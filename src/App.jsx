@@ -12,22 +12,14 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='choose_name' element={<CharacterName/>}/>
+        <Route path='/choose_name' element={<CharacterName/>}/>
         <Route path='/characters' element={<ChooseClass/>}/>
         <Route path='/' element={<Home/>}/>
       </Routes>
     </>
-  //   <div className="grid h-screen place-items-center">
-  //     <HomeIcon icon={<GrGamepad size='140'/>} />
-  //   </div>
+
   );
 }
-
-// const HomeIcon = ({icon}) => (
-//   <div className="home-icon">
-//     {icon}
-//   </div>
-// )
 
 export default App;
 
