@@ -10,7 +10,7 @@ function Home() {
   }
 
   return (
-    <div className="grid h-screen place-items-center">
+    <div onClick={chooseName} className="grid h-screen place-items-center">
       <HomeIcon icon={<GrGamepad size="140" />} />
     </div>
   );
