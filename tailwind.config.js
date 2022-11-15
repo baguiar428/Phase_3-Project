@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'retro': ['Retro'] 
+      },
       colors: {
         primary: '#202225',
         seconday: '#5865f2',
