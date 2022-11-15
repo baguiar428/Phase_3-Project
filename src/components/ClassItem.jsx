@@ -1,24 +1,25 @@
 import React from 'react'
-import {useNavigate} from 'react-router-dom'
+// import {useNavigate} from 'react-router-dom'
 
 function ClassItem({character}){
 
-    const navigate = useNavigate();
-
-    //change navigation path as necessary
-    function showHero(){
-        navigate(`/characters/${character.id}`)
+    //add route to Maps
+    function handleClick(){
+        console.log(character.spec)
     }
 
     return(
-        <div>
-            <span><bold>{character.name}</bold></span>
-            <img className="characterImg" src={character.img} alt={character.name} onClick={showHero}/>
-            <div>
-                <span>Character Attributes:</span>
+        <div className="text-white text-center px-10" onClick={handleClick}>
+            <img src={character.img} alt={character.name}/>
+            <div className="bg-black opacity-75">
+                <span>Class: {character.spec}</span>
+                <br></br>
                 <span>Health: {character.health}</span>
+                <br></br>
                 <span>Str: {character.str}</span>
+                <br></br>
                 <span>Agi: {character.agi}</span>
+                <br></br>
                 <span>Int: {character.int}</span>
             </div>
         </div>

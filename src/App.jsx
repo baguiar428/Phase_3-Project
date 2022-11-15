@@ -6,6 +6,7 @@ import { GrGamepad } from "react-icons/gr";
 import ChooseClass from './components/ChooseClass'
 import Home from './components/Home'
 import CharacterName from './components/CharacterName'
+import Maps from './components/Maps'
 import SideBar from "./components/SideBar";
 import About from './components/About';
 
@@ -16,6 +17,7 @@ function App() {
         <Route path='/choose_name' element={<CharacterName/>}/>
         <Route path='/characters' element={<ChooseClass/>}/>
         <Route path='/about' element={<About/>}/>
+        <Route path='/maps' element={<Maps/>}/>
         <Route path='/' element={<Home/>}/>
       </Routes>
     </div>
