@@ -42,13 +42,13 @@ function ChooseClass (){
 
     // {location.state.name} grabs the name you created
     return(
-        <>
+        <div className='font-retro'>
         <b>{location.state.name}</b>
         {/* character info here */}
         <div className="columns-4">
         {characterMap}
         </div>
-        </>
+        </div>
     )
 }
 
