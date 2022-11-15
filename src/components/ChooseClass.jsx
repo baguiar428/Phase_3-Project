@@ -1,11 +1,13 @@
 import React, {useState} from 'react'
-import {useLocation} from 'react-router-dom'
+import {useLocation, useNavigate} from 'react-router-dom'
 import ClassItem from './ClassItem'
 
 //import characterData 
 
 function ChooseClass (){
     const location = useLocation();
+    const navigate = useNavigate();
+
     const [hero, setHero] = useState({
         name: location.state.name,
         spec: "",
@@ -14,35 +16,54 @@ function ChooseClass (){
         agility: "",
         intellect: "",
         img_url: "",
+        wins: "",
     })
 
     const characterData = 
         [
             {
                 spec: "Warrior",
-                health: 20,
-                str: 8,
-                agi: 6,
-                int: 3,
+                health: 25,
+                str: 6,
+                agi: 3,
+                int: 1,
                 // img
             },
             {
                 spec: "Mage",
                 health: 15,
-                str: 3,
-                agi: 4,
-                int: 8,
+                str: 2,
+                agi: 3,
+                int: 7,
                 
             },
             {
-                spec:"Archer"
+                spec:"Archer",
+                health: 15,
+                str: 3,
+                agi: 7,
+                int: 2,
             },
             {
-                spec: "Rogue"
+                spec: "Rogue",
+                health: 15,
+                str: 2,
+                agi: 6,
+                int: 4,
+            },
+            {   spec: "Amazon",
+                health: 20,
+                str: 5,
+                agi: 4,
+                int: 2,
             }
         ]
-
-    console.log(characterData)
+    
+    //navigate to maps page
+    //setup post request to backend using "hero" state
+    function startAdventure(){
+        navigate('/maps', {state: {hero: hero}})
+    }
 
     const characterMap = characterData.map(
         (character) => 
@@ -58,11 +79,10 @@ function ChooseClass (){
     // {location.state.name} grabs the name you created
     return(
         <div className='font-retro'>
-        <b>{location.state.name}</b>
         {/* character info here */}
-        <div className="columns-4"> {characterMap} </div>
+        <div className="columns-5"> {characterMap} </div>
         <div className="bg-black opacity-75 text-white content-center">
-            <div>
+            {/* <div> */}
                 <table>
                     <thead>
                         <tr>
@@ -94,8 +114,9 @@ function ChooseClass (){
                     </tbody>
                 </table>
             </div>
+        {/* </div> */}
+        <button onClick={startAdventure}>BEGIN YOUR ADVENTURE!</button>
         </div>
-        </>
     )
 }
 

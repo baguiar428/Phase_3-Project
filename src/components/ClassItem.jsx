@@ -1,9 +1,7 @@
-import React, {useState} from 'react'
+import React from 'react'
 
 function ClassItem({character, name, setHero}){
-    //add route to Maps
     //save hero name, stats to state
-    //send state to backend
     function chooseClass(){
         setHero({
             name: name,
@@ -14,8 +12,6 @@ function ClassItem({character, name, setHero}){
             intellect: character.int,
             img_url: character.img,
         })
-        // console.log(character.spec)
-        // navigate(`/maps`, {state: {hero: hero}})
     }
 
     return(
