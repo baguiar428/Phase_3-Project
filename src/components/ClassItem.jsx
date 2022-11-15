@@ -1,26 +1,28 @@
-import React from 'react'
-// import {useNavigate} from 'react-router-dom'
+import React, {useState} from 'react'
 
-function ClassItem({character}){
-
+function ClassItem({character, name, setHero}){
     //add route to Maps
-    function handleClick(){
-        console.log(character.spec)
+    //save hero name, stats to state
+    //send state to backend
+    function chooseClass(){
+        setHero({
+            name: name,
+            spec: character.spec,
+            health: character.health,
+            strength: character.str, 
+            agility: character.agi,
+            intellect: character.int,
+            img_url: character.img,
+        })
+        // console.log(character.spec)
+        // navigate(`/maps`, {state: {hero: hero}})
     }
 
     return(
-        <div className="text-white text-center px-10" onClick={handleClick}>
-            <img src={character.img} alt={character.name}/>
+        <div className="text-white text-center px-10" onClick={chooseClass}>
             <div className="bg-black opacity-75">
                 <span>Class: {character.spec}</span>
-                <br></br>
-                <span>Health: {character.health}</span>
-                <br></br>
-                <span>Str: {character.str}</span>
-                <br></br>
-                <span>Agi: {character.agi}</span>
-                <br></br>
-                <span>Int: {character.int}</span>
+                <img src={character.img} alt={character.name}/>
             </div>
         </div>
     )
