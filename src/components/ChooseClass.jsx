@@ -1,10 +1,20 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {useLocation} from 'react-router-dom'
 import ClassItem from './ClassItem'
 
 //import characterData 
 
 function ChooseClass (){
+    const location = useLocation();
+    const [hero, setHero] = useState({
+        name: location.state.name,
+        spec: "",
+        health: "",
+        strength: "", 
+        agility: "",
+        intellect: "",
+        img_url: "",
+    })
 
     const characterData = 
         [
@@ -13,14 +23,16 @@ function ChooseClass (){
                 health: 20,
                 str: 8,
                 agi: 6,
-                int: 3
+                int: 3,
+                // img
             },
             {
                 spec: "Mage",
                 health: 15,
                 str: 3,
                 agi: 4,
-                int: 8
+                int: 8,
+                
             },
             {
                 spec:"Archer"
@@ -31,12 +43,15 @@ function ChooseClass (){
         ]
 
     console.log(characterData)
-    const location = useLocation();
 
     const characterMap = characterData.map(
         (character) => 
-            <>
-                <ClassItem key={character.index} character={character}/>
+            <> 
+                <ClassItem 
+                    name={location.state.name} 
+                    setHero={setHero}
+                    key={character.index} 
+                    character={character}/> 
             </>
         )
 
@@ -45,10 +60,42 @@ function ChooseClass (){
         <div className='font-retro'>
         <b>{location.state.name}</b>
         {/* character info here */}
-        <div className="columns-4">
-        {characterMap}
+        <div className="columns-4"> {characterMap} </div>
+        <div className="bg-black opacity-75 text-white content-center">
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Name: </td>
+                            <td>{location.state.name}</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Class: </td>
+                            <td>{hero.spec}</td>
+                        </tr>
+                        <tr>
+                            <td>Health: </td>
+                            <td>{hero.health}</td>
+                        </tr>
+                        <tr>
+                            <td>Strength: </td>
+                            <td>{hero.strength}</td>
+                        </tr>
+                        <tr>
+                            <td>Agility: </td>
+                            <td>{hero.agility}</td>
+                        </tr>
+                        <tr>
+                            <td>Intellect: </td>
+                            <td>{hero.intellect}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        </div>
+        </>
     )
 }
 
