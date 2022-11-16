@@ -27,7 +27,7 @@ function Home() {
         Bandersnatch
       </h1>
       <img
-        className="display: block ml-auto mr-auto"
+        className="display: block ml-auto mr-auto h-3/5 rounded-2xl my-5"
         src={adventureMap}
         alt="Adventure Map"
       />
