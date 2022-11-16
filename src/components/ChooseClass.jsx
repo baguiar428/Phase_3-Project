@@ -20,28 +20,32 @@ function ChooseClass (){
 
     const characterData = 
         [
-            {
+            {   
+                id:1,
                 spec: "Warrior",
                 health: 25,
                 str: 6,
                 agi: 3,
                 int: 1,
             },
-            {
+            {   
+                id:2,
                 spec: "Mage",
                 health: 15,
                 str: 2,
                 agi: 3,
                 int: 7,    
             },
-            {
+            {   
+                id:3,
                 spec:"Archer",
                 health: 15,
                 str: 3,
                 agi: 7,
                 int: 2,
             },
-            {
+            {   
+                id:4,
                 spec: "Rogue",
                 health: 15,
                 str: 2,
@@ -68,7 +72,7 @@ function ChooseClass (){
                 <ClassItem 
                     name={location.state.name} 
                     setHero={setHero}
-                    key={character.index} 
+                    key={character.id} 
                     character={character}/> 
             </>
         )
@@ -79,14 +83,16 @@ function ChooseClass (){
         <h1 className="text-3xl text-white text-center">CHOOSE YOUR CLASS!</h1>
         <br></br>
         {/* character info here */}
-        <div className="columns-5"> {characterMap} </div>
+        <h1 className="text-3xl text-center text-white">CHOOSE YOUR CLASS!</h1>
         <br></br>
-        <div className="bg-black opacity-75 border-2 text-white rounded flex justify-center">
+        <div className="columns-5"> {characterMap} </div>
+        <div className="bg-black opacity-75 text-white content-center">
+            {/* <div> */}
                 <table>
                     <thead>
                         <tr>
                             <td>Name: </td>
-                            <td> {location.state.name}</td>
+                            <td>{location.state.name}</td>
                         </tr>
                     </thead>
                     <tbody>
