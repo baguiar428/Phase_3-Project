@@ -15,7 +15,7 @@ function CharacterName(){
     }
 
     return(
-        <div className='characterName font-retro'>
+        <div className='font-retro'>
             <form onSubmit = {handleSubmit}>
                 <label>Choose your name:</label>
                 <input type='text' placeholder='Enter Name...' value={charName} onChange={handleChange}/>

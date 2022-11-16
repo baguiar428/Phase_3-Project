@@ -95,7 +95,7 @@ function ChooseClass (){
                 </table>
             </div>
         </div>
-        </>
+        </div>
     )
 }
 
