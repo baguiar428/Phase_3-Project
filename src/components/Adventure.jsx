@@ -15,7 +15,8 @@ function Adventure(){
     }, [params.id])
 
     const allMonsters = currentMap.monsters ? currentMap.monsters.map((monster) => 
-        <div onClick={()=> navigate("/battle", {state: {currentHero: location.state.currentHero, monster: monster}})}>{monster.name}</div>) : null
+        <div onClick={()=> navigate("/battle", {state: {currentHero: location.state.currentHero, monster: monster}})}>{monster.name}</div>) 
+        : null
 
     return(
         <div className="font-retro">
