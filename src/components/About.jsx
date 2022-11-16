@@ -1,18 +1,26 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { GrHomeRounded } from "react-icons/gr";
+import SideBarIcon from "./SideBarIcon";
 
 function About() {
+  const navigate = useNavigate();
 
-    const navigate = useNavigate();
+  function home() {
+    navigate("/");
+  }
 
-    return (
-        <div>
-            <h1 className="text-white">Test</h1>
-            <p>Start your own adventure into a mystic and wild world.</p> 
-            <p>Battle your way through 5 environments as a Warrior, Mage, Archer, Rogue, or Amazonian</p>
-            <p>Take on dangerous </p>
+  return (
+      <div className="fixed top-0 left-0 h-screen w-16 m-0
+          flex flex-col
+          bg-gray-900 shadow-lg">
+        <div onClick={home}>
+          <SideBarIcon icon={<GrHomeRounded size="32" />} />
         </div>
-    );
+      </div>
+  );
 }
+
+export default About;
 
 export default About;

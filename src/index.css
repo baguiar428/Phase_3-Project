@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Retro';
+  src: local('Retro'),  url(./fonts/RetroGaming.ttf) format('truetype');
+}
+
 @layer components {
   
   .sidebar-icon {
@@ -21,4 +26,15 @@
     text-xs font-bold
     transition-all duration-100 scale-0 origin-left;
   }
+
+  .home-icon {
+    @apply relative flex items-center justify-center
+    h-40 w-40 mt-2 mb-2 mx-auto shadow-lg
+    bg-gray-500
+    hover:bg-red-600
+    rounded-3xl hover:rounded-xl
+    transition-all duration-300 ease-linear
+    cursor-pointer;
+  }
+
 }
