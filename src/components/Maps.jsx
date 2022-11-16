@@ -14,12 +14,14 @@ function Maps(){
         .then(data => setMapData(data))
     },[])
 
+    // console.log(location.state.hero)
+
     //mapData isnt populated at first, so need to setup a ternary to check and map only after fetch has happened
     //interpolate img route
     const allMaps = mapData ? mapData.map((environment)=> 
         <div 
             className="bg-black opacity-75 rounded-xl text-white text-center px-10" 
-            onClick={()=>navigate(`/maps/${environment.id}`)}
+            onClick={()=>navigate(`/maps/${environment.id}`, {state: {currentHero: location.state.hero}})}
         >
             <span>{environment.name}</span>
             <img src={environment.img_URL} alt={environment.name}/>

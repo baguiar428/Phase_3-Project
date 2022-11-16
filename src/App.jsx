@@ -7,6 +7,7 @@ import Maps from './components/Maps'
 import Adventure from './components/Adventure'
 import About from './components/About';
 import Leaderboard from './components/Leaderboard';
+import Battle from './components/Battle'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/maps/:id' element={<Adventure/>}/>
         <Route path='/' element={<Home/>}/>
         <Route path='/leaderboard' element={<Leaderboard/>}/>
+        <Route path='/battle' element={<Battle/>}/>
       </Routes>
     </div>
 
