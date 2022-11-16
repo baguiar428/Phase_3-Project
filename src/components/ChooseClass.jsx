@@ -1,11 +1,6 @@
 import React, {useState} from 'react'
 import {useLocation, useNavigate} from 'react-router-dom'
 import ClassItem from './ClassItem'
-import warrior from "../assets/images/Warrior.gif"
-import rogue from "../assets/images/Rogue.gif"
-import archer from "../assets/images/Archer.gif"
-import mage from "../assets/images/Mage.gif"
-import amazonian from "../assets/images/Amazonian.gif"
 
 //import characterData 
 
@@ -20,7 +15,6 @@ function ChooseClass (){
         strength: "", 
         agility: "",
         intellect: "",
-        img_url: "",
         wins: "",
     })
 
@@ -32,15 +26,13 @@ function ChooseClass (){
                 str: 6,
                 agi: 3,
                 int: 1,
-                img: {warrior}
             },
             {
                 spec: "Mage",
                 health: 15,
                 str: 2,
                 agi: 3,
-                int: 7,
-                img: {mage}
+                int: 7,    
             },
             {
                 spec:"Archer",
@@ -48,22 +40,19 @@ function ChooseClass (){
                 str: 3,
                 agi: 7,
                 int: 2,
-                img: {archer}
             },
             {
                 spec: "Rogue",
                 health: 15,
                 str: 2,
                 agi: 6,
-                int: 4,
-                img: {rogue}
+                int: 4,  
             },
             {   spec: "Amazonian",
                 health: 20,
                 str: 5,
                 agi: 4,
                 int: 2,
-                img: {amazonian}
             }
         ]
     
@@ -87,43 +76,47 @@ function ChooseClass (){
     // {location.state.name} grabs the name you created
     return(
         <div className='font-retro'>
+        <h1 className="text-3xl text-white text-center">CHOOSE YOUR CLASS!</h1>
+        <br></br>
         {/* character info here */}
         <div className="columns-5"> {characterMap} </div>
-        <div className="bg-black opacity-75 text-white content-center">
-            {/* <div> */}
+        <br></br>
+        <div className="bg-black opacity-75 border-2 text-white rounded flex justify-center">
                 <table>
                     <thead>
                         <tr>
                             <td>Name: </td>
-                            <td>{location.state.name}</td>
+                            <td> {location.state.name}</td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>Class: </td>
-                            <td>{hero.spec}</td>
+                            <td> {hero.spec}</td>
                         </tr>
                         <tr>
                             <td>Health: </td>
-                            <td>{hero.health}</td>
+                            <td> {hero.health}</td>
                         </tr>
                         <tr>
                             <td>Strength: </td>
-                            <td>{hero.strength}</td>
+                            <td> {hero.strength}</td>
                         </tr>
                         <tr>
                             <td>Agility: </td>
-                            <td>{hero.agility}</td>
+                            <td> {hero.agility}</td>
                         </tr>
                         <tr>
                             <td>Intellect: </td>
-                            <td>{hero.intellect}</td>
+                            <td> {hero.intellect}</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-        {/* </div> */}
-        <button onClick={startAdventure}>BEGIN YOUR ADVENTURE!</button>
+        <br></br>
+        <div className="flex justify-center border-0">
+            <button className="bg-black opacity-75 border-2 rounded text-red-500" onClick={startAdventure}> BEGIN YOUR ADVENTURE! </button>
+        </div>
         </div>
     )
 }

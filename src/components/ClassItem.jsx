@@ -1,5 +1,4 @@
 import React from 'react'
-// import warrior from "../assets/images/Warrior.gif"
 
 
 function ClassItem({character, name, setHero}){
@@ -16,11 +15,12 @@ function ClassItem({character, name, setHero}){
         })
     }
 
+    console.log(character.img)
     return(
         <div className="text-white text-center px-10" onClick={chooseClass}>
-            <div className="bg-black opacity-75">
-                <span>Class: {character.spec}</span>
-                <img src= {character.img} alt={character.name}/>
+            <div className="bg-black rounded-xl opacity-75">
+                <span>{character.spec}</span>
+                <img className="object-scale-down h-20 w-full" src= {require(`../assets/images/${character.spec}.gif`)} alt={character.name}/>
             </div>
         </div>
     )

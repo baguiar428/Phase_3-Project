@@ -18,14 +18,18 @@ function Maps(){
     //mapData isnt populated at first, so need to setup a ternary to check and map only after fetch has happened
     //interpolate img route
     const allMaps = mapData ? mapData.map((environment)=> 
-        <div>
+        <div className="bg-black opacity-75 rounded-xl text-white text-center">
             <span>{environment.name}</span>
             <img src={environment.img_URL} alt={environment.name}/>
         </div>
         ) : null
 
     return(
-        <div className="columns-5">{allMaps}</div>
+        <div className="font-retro">
+            <h1 className="text-white text-3xl text-center">CHOOSE YOUR ADVENTURE!</h1>
+            <br></br>
+            <div className="columns-5">{allMaps}</div>
+        </div>
     )
 
 }
