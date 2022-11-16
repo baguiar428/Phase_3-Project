@@ -1,6 +1,11 @@
 import React, {useState} from 'react'
 import {useLocation, useNavigate} from 'react-router-dom'
 import ClassItem from './ClassItem'
+import warrior from "../assets/images/Warrior.gif"
+import rogue from "../assets/images/Rogue.gif"
+import archer from "../assets/images/Archer.gif"
+import mage from "../assets/images/Mage.gif"
+import amazonian from "../assets/images/Amazonian.gif"
 
 //import characterData 
 
@@ -27,7 +32,7 @@ function ChooseClass (){
                 str: 6,
                 agi: 3,
                 int: 1,
-                // img
+                img: {warrior}
             },
             {
                 spec: "Mage",
@@ -35,7 +40,7 @@ function ChooseClass (){
                 str: 2,
                 agi: 3,
                 int: 7,
-                
+                img: {mage}
             },
             {
                 spec:"Archer",
@@ -43,6 +48,7 @@ function ChooseClass (){
                 str: 3,
                 agi: 7,
                 int: 2,
+                img: {archer}
             },
             {
                 spec: "Rogue",
@@ -50,12 +56,14 @@ function ChooseClass (){
                 str: 2,
                 agi: 6,
                 int: 4,
+                img: {rogue}
             },
-            {   spec: "Amazon",
+            {   spec: "Amazonian",
                 health: 20,
                 str: 5,
                 agi: 4,
                 int: 2,
+                img: {amazonian}
             }
         ]
     
