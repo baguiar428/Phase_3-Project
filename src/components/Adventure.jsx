@@ -12,7 +12,17 @@ function Adventure(){
         .then(data => setCurrentMap(data))
     }, [params.id])
 
-    console.log(currentMap.name)
+    const allMonsters = currentMap.monsters ? currentMap.monsters.map((monster) => 
+        <div>{monster.name}</div>) : null
+
+    return(
+        <div className="font-retro">
+            <h1 className="text-3xl text-white text-center">{currentMap.name}</h1>
+            {/* add map url to table */}
+            {/* <img src= {require(`../assets/images/${currentMap.url}.png`)} alt={currentMap.name}/> */}
+            <div className="columns-3">{allMonsters}</div>
+        </div>
+    )
 
 }
 

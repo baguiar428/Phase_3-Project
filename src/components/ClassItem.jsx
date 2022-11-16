@@ -15,10 +15,9 @@ function ClassItem({character, name, setHero}){
         })
     }
 
-    console.log(character.img)
     return(
-        <div className="text-white text-center px-10" onClick={chooseClass}>
-            <div className="bg-black rounded-xl opacity-75">
+        <div className=" bg-black rounded-xl opacity-75 text-white text-center px-10" onClick={chooseClass}>
+            <div className="">
                 <span>{character.spec}</span>
                 <img className="object-scale-down h-20 w-full" src= {require(`../assets/images/${character.spec}.gif`)} alt={character.name}/>
             </div>
@@ -27,5 +26,3 @@ function ClassItem({character, name, setHero}){
 }
 
 export default ClassItem
-
-// require(character.img)
