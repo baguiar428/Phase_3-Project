@@ -21,7 +21,8 @@ function ChooseClass (){
 
     const characterData = 
         [
-            {
+            {   
+                id:1,
                 spec: "Warrior",
                 health: 25,
                 str: 6,
@@ -29,7 +30,8 @@ function ChooseClass (){
                 int: 1,
                 // img
             },
-            {
+            {   
+                id:2,
                 spec: "Mage",
                 health: 15,
                 str: 2,
@@ -37,21 +39,25 @@ function ChooseClass (){
                 int: 7,
                 
             },
-            {
+            {   
+                id:3,
                 spec:"Archer",
                 health: 15,
                 str: 3,
                 agi: 7,
                 int: 2,
             },
-            {
+            {   
+                id:4,
                 spec: "Rogue",
                 health: 15,
                 str: 2,
                 agi: 6,
                 int: 4,
             },
-            {   spec: "Amazon",
+            { 
+                id:5,
+                spec: "Amazon",
                 health: 20,
                 str: 5,
                 agi: 4,
@@ -71,7 +77,7 @@ function ChooseClass (){
                 <ClassItem 
                     name={location.state.name} 
                     setHero={setHero}
-                    key={character.index} 
+                    key={character.id} 
                     character={character}/> 
             </>
         )
@@ -80,13 +86,16 @@ function ChooseClass (){
     return(
         <div className='font-retro'>
         {/* character info here */}
+        <h1 className="text-3xl text-center text-white">CHOOSE YOUR CLASS!</h1>
+        <br></br>
         <div className="columns-5"> {characterMap} </div>
-        <div className="bg-black opacity-75 text-white content-center">
+        <br></br>
+        <div className="bg-black opacity-75 text-white">
             {/* <div> */}
                 <table>
                     <thead>
                         <tr>
-                            <td>Name: </td>
+                            <tr>Name: </tr>
                             <td>{location.state.name}</td>
                         </tr>
                     </thead>

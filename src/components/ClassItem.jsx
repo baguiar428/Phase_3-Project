@@ -17,7 +17,7 @@ function ClassItem({character, name, setHero}){
     return(
         <div className="text-white text-center px-10" onClick={chooseClass}>
             <div className="bg-black opacity-75">
-                <span>Class: {character.spec}</span>
+                <span>{character.spec}</span>
                 <img src={character.img} alt={character.name}/>
             </div>
         </div>

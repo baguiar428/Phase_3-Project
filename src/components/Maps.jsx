@@ -1,13 +1,12 @@
 import React, {useEffect, useState} from 'react'
-// import {useLocation} from 'react-router-dom'
+import {useLocation, useNavigate} from 'react-router-dom'
 
 //use location.state.hero to grab hero info
 function Maps(){
-    // const location = useLocation()
+    const location = useLocation()
+    const navigate = useNavigate()
     const [mapData, setMapData] = useState()
 
-    //add url for map info here
-    // const map_url = 'http://localhost:9292/maps'
     //fetch map data
     useEffect(() => {
         fetch('http://localhost:9292/maps')
@@ -18,14 +17,21 @@ function Maps(){
     //mapData isnt populated at first, so need to setup a ternary to check and map only after fetch has happened
     //interpolate img route
     const allMaps = mapData ? mapData.map((environment)=> 
-        <div>
+        <div 
+            className="bg-black opacity-75 text-white text-center px-10" 
+            onClick={()=>navigate(`/maps/${environment.id}`)}
+        >
             <span>{environment.name}</span>
             <img src={environment.img_URL} alt={environment.name}/>
         </div>
         ) : null
 
     return(
-        <div className="columns-5">{allMaps}</div>
+        <div className="font-retro">
+            <h1 className="text-3xl text-center text-white">CHOOSE YOUR ADVENTURE!</h1>
+            <br></br>
+            <div className="columns-5">{allMaps}</div>
+        </div>
     )
 
 }

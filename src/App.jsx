@@ -4,6 +4,7 @@ import ChooseClass from './components/ChooseClass'
 import Home from './components/Home'
 import CharacterName from './components/CharacterName'
 import Maps from './components/Maps'
+import Adventure from './components/Adventure'
 import About from './components/About';
 import Leaderboard from './components/Leaderboard';
 
@@ -15,6 +16,7 @@ function App() {
         <Route path='/characters' element={<ChooseClass/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/maps' element={<Maps/>}/>
+        <Route path='/maps/:id' element={<Adventure/>}/>
         <Route path='/' element={<Home/>}/>
         <Route path='/leaderboard' element={<Leaderboard/>}/>
       </Routes>
