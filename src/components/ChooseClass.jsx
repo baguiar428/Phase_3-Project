@@ -19,48 +19,48 @@ function ChooseClass (){
     })
 
     const characterData = 
-        [
-            {   
-                id:1,
-                spec: "Warrior",
-                health: 25,
-                str: 6,
-                agi: 3,
-                int: 1,
-            },
-            {   
-                id:2,
-                spec: "Mage",
-                health: 15,
-                str: 2,
-                agi: 3,
-                int: 7,    
-            },
-            {   
-                id:3,
-                spec:"Archer",
-                health: 15,
-                str: 3,
-                agi: 7,
-                int: 2,
-            },
-            {   
-                id:4,
-                spec: "Rogue",
-                health: 15,
-                str: 2,
-                agi: 6,
-                int: 4,  
-            },
-            {   
-                id:5,
-                spec: "Amazonian",
-                health: 20,
-                str: 5,
-                agi: 4,
-                int: 2,
-            }
-        ]
+    [
+        {   
+            id:1,
+            spec: "Warrior",
+            health: 35,
+            str: 9,
+            agi: 3,
+            int: 1,
+        },
+        {   
+            id:2,
+            spec: "Mage",
+            health: 25,
+            str: 2,
+            agi: 3,
+            int: 10,    
+        },
+        {   
+            id:3,
+            spec:"Archer",
+            health: 20,
+            str: 5,
+            agi: 9,
+            int: 2,
+        },
+        {   
+            id:4,
+            spec: "Rogue",
+            health: 25,
+            str: 2,
+            agi: 8,
+            int: 5,  
+        },
+        {   
+            id:5,
+            spec: "Amazonian",
+            health: 30,
+            str: 7,
+            agi: 5,
+            int: 2,
+        }
+    ]
     
     //navigate to maps page
     //setup post request to backend using "hero" state
