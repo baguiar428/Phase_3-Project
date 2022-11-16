@@ -52,7 +52,9 @@ function ChooseClass (){
                 agi: 6,
                 int: 4,  
             },
-            {   spec: "Amazonian",
+            {   
+                id:5,
+                spec: "Amazonian",
                 health: 20,
                 str: 5,
                 agi: 4,
@@ -83,10 +85,9 @@ function ChooseClass (){
         <h1 className="text-3xl text-white text-center">CHOOSE YOUR CLASS!</h1>
         <br></br>
         {/* character info here */}
-        <h1 className="text-3xl text-center text-white">CHOOSE YOUR CLASS!</h1>
-        <br></br>
         <div className="columns-5"> {characterMap} </div>
-        <div className="bg-black opacity-75 text-white content-center">
+        <br></br>
+        <div className="text-white flex justify-center">
             {/* <div> */}
                 <table>
                     <thead>

@@ -18,7 +18,7 @@ function Maps(){
     //interpolate img route
     const allMaps = mapData ? mapData.map((environment)=> 
         <div 
-            className="bg-black opacity-75 text-white text-center px-10" 
+            className="bg-black opacity-75 rounded-xl text-white text-center px-10" 
             onClick={()=>navigate(`/maps/${environment.id}`)}
         >
             <span>{environment.name}</span>
@@ -27,7 +27,11 @@ function Maps(){
         ) : null
 
     return(
-        <div className="columns-5">{allMaps}</div>
+        <div className="font-retro">
+            <h1 className="text-3xl text-white text-center">CHOOSE YOUR ADVENTURE!</h1>
+            <br></br>
+            <div className="columns-5">{allMaps}</div>
+        </div>
     )
 
 }
