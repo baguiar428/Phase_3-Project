@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { GrGamepad, GrInfo, GrAchievement } from "react-icons/gr";
+import adventureMap from "../assets/images/adventure_map.jpg";
 
 function Home() {
   const navigate = useNavigate();
@@ -10,44 +11,41 @@ function Home() {
   }
 
   function about() {
-    navigate("/about")
+    navigate("/about");
   }
 
   function leaderboard() {
-    navigate("/leaderboard")
+    navigate("/leaderboard");
   }
 
   return (
-    <div className="grid grid-cols-3 gap-3">
-      <div onClick={about} className="grid h-screen place-items-end">
-        <HomeIcon icon={<GrInfo size="140" />} />
+    <>
+      <h1
+        className="display: block text-center text-green-500 
+                  font-retro text-9xl"
+      >
+        Bandersnatch
+      </h1>
+      <img
+        className="display: block ml-auto mr-auto"
+        src={adventureMap}
+        alt="Adventure Map"
+      />
+      <div className="flex">
+        <div onClick={about} className="flex-1">
+          <HomeIcon icon={<GrInfo size="140" />} />
+        </div>
+        <div onClick={chooseName} className="flex-1">
+          <HomeIcon icon={<GrGamepad size="140" />} />
+        </div>
+        <div onClick={leaderboard} className="flex-1">
+          <HomeIcon icon={<GrAchievement size="140" />} />
+        </div>
       </div>
-      <div onClick={chooseName} className="grid h-screen place-items-center">
-        <HomeIcon icon={<GrGamepad size="140" />} />
-      </div>
-      <div onClick={leaderboard} className="grid h-screen place-items-end">
-        <HomeIcon icon={<GrAchievement size="140" />} />
-      </div>
-    </div>
+    </>
   );
 }
 
 const HomeIcon = ({ icon }) => <div className="home-icon">{icon}</div>;
 
 export default Home;
-
-
-// return (
-//   <div className="grid grid-cols-3 gap-3">
-//     <div onClick={about} className="grid h-screen place-items-end">
-//       <HomeIcon icon={<GrInfo size="140" />} />
-//     </div>
-//     <div onClick={chooseName} className="grid h-screen place-items-center">
-//       <HomeIcon icon={<GrGamepad size="140" />} />
-//     </div>
-//     <div className="grid h-screen place-items-end">
-//       <HomeIcon icon={<GrAchievement size="140" />} />
-//     </div>
-//   </div>
-// );
-// }
