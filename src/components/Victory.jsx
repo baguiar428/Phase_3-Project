@@ -31,7 +31,18 @@ function Victory() {
             wins: hero.wins + 1
         })
 
-        navigate('/maps', {state: {hero: hero}})
+        console.log(hero)
+        
+        fetch(`http://localhost:9292/maps/${hero.id}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify(hero)
+        })
+            .then(resp =>resp.json())
+            .then(hero =>setHero(hero))
+            .then(navigate('/maps', {state: {hero: hero}}))
     }
 
     const rewardMap = location.state.monster.rewards.map((reward) => 
