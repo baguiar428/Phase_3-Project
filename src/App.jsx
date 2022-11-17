@@ -8,6 +8,7 @@ import Adventure from './components/Adventure'
 import About from './components/About';
 import Leaderboard from './components/Leaderboard';
 import Battle from './components/Battle'
+import BattleResult from './components/BattleResult'
 
 function App() {
   return (
@@ -18,9 +19,10 @@ function App() {
         <Route path='/about' element={<About/>}/>
         <Route path='/maps' element={<Maps/>}/>
         <Route path='/maps/:id' element={<Adventure/>}/>
-        <Route path='/' element={<Home/>}/>
         <Route path='/leaderboard' element={<Leaderboard/>}/>
         <Route path='/battle' element={<Battle/>}/>
+        <Route path='/battle_result' element={<BattleResult />}/>
+        <Route path='/' element={<Home/>}/>
       </Routes>
     </div>
 
