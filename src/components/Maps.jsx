@@ -24,9 +24,11 @@ function Maps(){
             onClick={()=>navigate(`/maps/${environment.id}`, {state: {currentHero: location.state.hero}})}
         >
             <span>{environment.name}</span>
-            <img src={environment.img_URL} alt={environment.name}/>
+            <img className="grid grid-rows-3" src={require(`../assets/images/${environment.image_URL}.png`)} alt={environment.name}/>
         </div>
         ) : null
+
+
 
     return(
         <div className="font-retro">

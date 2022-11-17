@@ -1,10 +1,10 @@
-import React from "react";
+// import React from "react";
 
-function Victory() {
-    return (
+// function Victory() {
+//     return (
 
-    );
-}
+//     );
+// }
 
-export default Victory;
+// export default Victory;
 
