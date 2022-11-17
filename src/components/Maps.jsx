@@ -1,11 +1,17 @@
 import React, {useEffect, useState} from 'react'
 import {useLocation, useNavigate} from 'react-router-dom'
+import { GrHomeRounded } from "react-icons/gr";
+import SideBarIcon from "./SideBarIconHome";
 
 //use location.state.hero to grab hero info
 function Maps(){
     const location = useLocation()
     const navigate = useNavigate()
     const [mapData, setMapData] = useState()
+
+    function home() {
+        navigate("/");
+      }
 
     //fetch map data
     useEffect(() => {
@@ -31,11 +37,20 @@ function Maps(){
 
 
     return(
+        <>
+        <div className="fixed top-0 left-0 h-screen w-16 m-0
+        flex flex-col
+        bg-gray-900 shadow-lg">
+      <div onClick={home}>
+        <SideBarIcon icon={<GrHomeRounded size="32" />} />
+      </div>
+    </div>
         <div className="font-retro">
             <h1 className="text-3xl text-white text-center">CHOOSE YOUR ADVENTURE!</h1>
             <br></br>
             <div className="container mx-auto grid grid-cols-3 grid-rows-2 gap-5 w-1/2 h-1/3">{allMaps}</div>
         </div>
+        </>
     )
 
 }
