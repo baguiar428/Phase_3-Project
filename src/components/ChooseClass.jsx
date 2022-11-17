@@ -1,10 +1,28 @@
 import React, {useState} from 'react'
 import {useLocation, useNavigate} from 'react-router-dom'
 import ClassItem from './ClassItem'
+import { GrHomeRounded, GrInfo, GrTime } from "react-icons/gr";
+import SideBarIconHome from "./SideBarIconHome";
+import SideBarIconAbout from "./SideBarIconAbout";
+import SideBarIconStats from "./SideBarIconStats";
 
 //import characterData 
 
 function ChooseClass (){
+
+    function home() {
+        navigate("/");
+      }
+    
+      function about() {
+        navigate("/about");
+      }
+    
+      function stats() {
+        navigate("/stats");
+      }
+    
+
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -81,11 +99,27 @@ function ChooseClass (){
 
     // {location.state.name} grabs the name you created
     return(
+        <>
+            <div
+        className="fixed top-0 left-0 h-screen w-16 m-0
+        flex flex-col
+        bg-gray-900 shadow-lg"
+      >
+        <div onClick={home}>
+          <SideBarIconHome icon={<GrHomeRounded size="32" />} />
+        </div>
+        <div onClick={about}>
+          <SideBarIconAbout onClick={about} icon={<GrInfo size="32" />} />
+        </div>
+        <div onClick={stats}>
+          <SideBarIconStats onClick={stats} icon={<GrTime size="32" />} />
+        </div>
+      </div>
         <div className='font-retro'>
         <h1 className="text-3xl text-white text-center">CHOOSE YOUR CLASS!</h1>
         <br></br>
         {/* character info here */}
-        <div className="columns-5"> {characterMap} </div>
+        <div className="columns-5 ml-12 pl-20 pr-10 mr-12"> {characterMap} </div>
         <br></br>
         <div className="text-white flex justify-center">
                 <table>
@@ -127,6 +161,7 @@ function ChooseClass (){
             > BEGIN YOUR ADVENTURE! </button>
         </div>
         </div>
+        </>
     )
 }
 
