@@ -24,23 +24,23 @@ function About() {
       <br></br>
       <div className="display: block text-center text-green-500 
                   font-retro text-3xl pl-10 pr-10 ml-10 mr-10">
-        <p>STEP 1: Create your Hero's name</p>
+        <p><b className="text-red-500">STEP 1:</b> Create your Hero's name</p>
         <br></br>
         <br></br>
-        <p>STEP 2: Click on and explore classes. Once decided click</p>
+        <p><b className="text-red-500">STEP 2:</b> Click on and explore classes. Once decided click</p>
 
         <p>"Begin Your Adventure!" </p>
         <br></br>
         <br></br>
-        <p>STEP 3: Choose your Adventure Map!</p>
+        <p><b className="text-red-500">STEP 3:</b> Choose your Adventure Map!</p>
 
         <p>(The closer to Mount Doom the harder the fights!)</p>
         <br></br>
         <br></br>
-        <p>STEP 4: Select which monster to battle</p>
+        <p><b className="text-red-500">STEP 4:</b> Select which monster to battle</p>
         <br></br>
         <br></br>
-        <p>STEP 5: Roll the dice to attack the monster,</p>
+        <p><b className="text-red-500">STEP 5:</b> Roll the dice to attack the monster,</p>
 
         <p>if you win collect your loot and increase your stats</p>
       </div>
