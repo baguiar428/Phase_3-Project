@@ -20,8 +20,8 @@ function CharacterName(){
             <p></p>
             <form onSubmit = {handleSubmit}>
                 <div className="flex flex-col justify-center items-center space-y-5 h-screen">
-                <label>What is your name Hero?</label>
-                <input type='text' placeholder='Enter Name...' value={charName} onChange={handleChange}/>
+                <label>What is your name, Hero?</label>
+                <input className='text-black' type='text' placeholder='Enter Name...' value={charName} onChange={handleChange}/>
                 <button type='submit'>Submit </button>
                 </div>
             </form>
