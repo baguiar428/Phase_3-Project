@@ -20,7 +20,7 @@ function Maps(){
     const allMaps = mapData ? mapData.map((environment)=> 
     <div 
     className="w-full bg-black opacity-75 rounded-xl text-white text-center my-4 transform transition duration-500 hover:scale-110 m-5 " 
-    onClick={()=>navigate(`/maps/${environment.id}`, {state: {currentHero: location.state.hero}})}
+    onClick={()=>navigate(`/maps/${environment.id}`, {state: {hero: location.state.hero}})}
     >
         <span>{environment.name}</span>
             

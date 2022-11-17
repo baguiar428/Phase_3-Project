@@ -1,14 +1,15 @@
-import React from 'react'
-import {Routes, Route} from 'react-router-dom'
-import ChooseClass from './components/ChooseClass'
-import Home from './components/Home'
-import CharacterName from './components/CharacterName'
-import Maps from './components/Maps'
-import Adventure from './components/Adventure'
+import React from 'react';
+import {Routes, Route} from 'react-router-dom';
+import ChooseClass from './components/ChooseClass';
+import Home from './components/Home';
+import CharacterName from './components/CharacterName';
+import Maps from './components/Maps';
+import Adventure from './components/Adventure';
 import About from './components/About';
 import Leaderboard from './components/Leaderboard';
-import Battle from './components/Battle'
-import BattleResult from './components/BattleResult'
+import Battle from './components/Battle';
+import Victory from './components/Victory';
+import Defeat from './components/Defeat';
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
         <Route path='/maps/:id' element={<Adventure/>}/>
         <Route path='/leaderboard' element={<Leaderboard/>}/>
         <Route path='/battle' element={<Battle/>}/>
-        <Route path='/battle_result' element={<BattleResult />}/>
+        <Route path='/victory' element={<Victory/>}/>
+        <Route path='/defeat' element={<Defeat/>}/>
         <Route path='/' element={<Home/>}/>
       </Routes>
     </div>

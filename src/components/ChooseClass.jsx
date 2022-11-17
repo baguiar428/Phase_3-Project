@@ -88,7 +88,6 @@ function ChooseClass (){
         <div className="columns-5"> {characterMap} </div>
         <br></br>
         <div className="text-white flex justify-center">
-            {/* <div> */}
                 <table>
                     <thead>
                         <tr>
@@ -122,7 +121,10 @@ function ChooseClass (){
             </div>
         <br></br>
         <div className="flex justify-center border-0">
-            <button className="bg-black opacity-75 border-2 rounded text-red-500" onClick={startAdventure}> BEGIN YOUR ADVENTURE! </button>
+            <button 
+                className="bg-black opacity-75 border-2 rounded text-red-500" 
+                onClick={startAdventure}
+            > BEGIN YOUR ADVENTURE! </button>
         </div>
         </div>
     )
