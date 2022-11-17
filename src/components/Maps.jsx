@@ -20,9 +20,9 @@ function Maps() {
   }
 
   function stats() {
-    navigate("/stats");
+    navigate("/stats", {state: {hero: location.state.hero}});
   }
-console.log(location.state.hero)
+
   //fetch map data
   useEffect(() => {
     fetch("http://localhost:9292/maps")
