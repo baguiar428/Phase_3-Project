@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {useLocation, useNavigate} from 'react-router-dom'
 import ClassItem from './ClassItem'
 
@@ -9,6 +9,7 @@ function ChooseClass (){
     const navigate = useNavigate();
 
     const [hero, setHero] = useState({
+        id:"",
         name: location.state.name,
         spec: "",
         health: "",
@@ -65,7 +66,16 @@ function ChooseClass (){
     //navigate to maps page
     //setup post request to backend using "hero" state
     function startAdventure(){
-        navigate('/maps', {state: {hero: hero}})
+        fetch('http://localhost:9292/heros', {
+            method: 'POST',
+            headers: {
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify(hero)
+        })
+        .then(resp => resp.json())
+        .then(hero => setHero(hero))
+        .then(navigate('/maps', {state: {hero: hero}}))
     }
 
     const characterMap = characterData.map(

@@ -5,6 +5,7 @@ function ClassItem({character, name, setHero}){
     //save hero name, stats to state
     function chooseClass(){
         setHero({
+            id:'',
             name: name,
             spec: character.spec,
             health: character.health,
@@ -17,7 +18,7 @@ function ClassItem({character, name, setHero}){
     
     return(
         <div className=" bg-black rounded-xl opacity-75 text-white text-center px-10" onClick={chooseClass}>
-            <div className="">
+            <div>
                 <span>{character.spec}</span>
                 <img className="object-scale-down h-20 w-full" src= {require(`../assets/images/${character.spec}.gif`)} alt={character.name}/>
             </div>
