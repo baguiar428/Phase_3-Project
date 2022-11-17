@@ -35,6 +35,8 @@ function Battle() {
         setDice(true)
     }
 
+    console.log(hero)
+    
     function victory(){
         navigate('/victory', {state: {hero: hero, monster: monster}})
     }

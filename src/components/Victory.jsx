@@ -21,29 +21,36 @@ function Victory() {
     console.log(chooseReward)
 
     function continueAdventure(){
-        setHero({
-            name: hero.name,
-            spec: hero.spec,
-            health: hero.health + chooseReward.health_boost,
-            strength: hero.strength + chooseReward.strength_boost, 
-            agility: hero.agility + chooseReward.agility_boost,
-            intellect: hero.intellect + chooseReward.intellect_boost,
-            wins: hero.wins + 1
-        })
+        // setHero({
+        //     id: hero.id,
+        //     name: hero.name,
+        //     spec: hero.spec,
+        //     health: hero.health + chooseReward.health_boost,
+        //     strength: hero.strength + chooseReward.strength_boost, 
+        //     agility: hero.agility + chooseReward.agility_boost,
+        //     intellect: hero.intellect + chooseReward.intellect_boost,
+        //     wins: hero.wins + 1
+        // })
 
-        console.log(hero)
-        
-        fetch(`http://localhost:9292/maps/${hero.id}`, {
+        fetch(`http://localhost:9292/heros/${hero.id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type':'application/json'
             },
-            body: JSON.stringify(hero)
+            body: JSON.stringify({
+                id: hero.id,
+                name: hero.name,
+                spec: hero.spec,
+                health: hero.health + chooseReward.health_boost,
+                strength: hero.strength + chooseReward.strength_boost, 
+                agility: hero.agility + chooseReward.agility_boost,
+                intellect: hero.intellect + chooseReward.intellect_boost,
+                wins: hero.wins + 1
+            })
         })
             .then(resp =>resp.json())
-            .then(hero =>setHero(hero))
-            .then(navigate('/maps', {state: {hero: hero}}))
-    }
+            .then(data => navigate('/maps', {state: {hero: data}}))
+        }
 
     const rewardMap = location.state.monster.rewards.map((reward) => 
         <Rewards
