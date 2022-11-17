@@ -14,7 +14,7 @@ function ClassItem({character, name, setHero}){
             img_url: character.img,
         })
     }
-
+    
     return(
         <div className=" bg-black rounded-xl opacity-75 text-white text-center px-10" onClick={chooseClass}>
             <div className="">
