@@ -14,7 +14,6 @@ function Maps(){
         .then(data => setMapData(data))
     },[])
 
-    // console.log(location.state.hero)
 
     //mapData isnt populated at first, so need to setup a ternary to check and map only after fetch has happened
     //interpolate img route
