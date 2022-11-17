@@ -1,0 +1,13 @@
+import React from "react";
+
+function SideBarIconStats({ icon, text = "Stats" }) {
+  return (
+    <div className="sidebar-icon group">
+      {icon}
+
+      <span class="sidebar-tooltip group-hover:scale-100">{text}</span>
+    </div>
+  );
+}
+
+export default SideBarIconStats;

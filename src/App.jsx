@@ -10,6 +10,7 @@ import Leaderboard from './components/Leaderboard';
 import Battle from './components/Battle';
 import Victory from './components/Victory';
 import Defeat from './components/Defeat';
+import Stats from './components/Stats';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path='/victory' element={<Victory/>}/>
         <Route path='/defeat' element={<Defeat/>}/>
         <Route path='/' element={<Home/>}/>
+        <Route path='/stats' element={<Stats/>}/>
       </Routes>
     </div>
 
