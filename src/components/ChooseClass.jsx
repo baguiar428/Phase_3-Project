@@ -121,9 +121,6 @@ function ChooseClass (){
         <div onClick={about}>
           <SideBarIconAbout onClick={about} icon={<GrInfo size="32" />} />
         </div>
-        <div onClick={stats}>
-          <SideBarIconStats onClick={stats} icon={<GrTime size="32" />} />
-        </div>
       </div>
         <div className='font-retro'>
         <h1 className="text-3xl text-white text-center">CHOOSE YOUR CLASS!</h1>
