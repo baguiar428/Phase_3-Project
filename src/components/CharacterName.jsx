@@ -15,11 +15,15 @@ function CharacterName(){
     }
 
     return(
-        <div className='font-retro'>
+        <div className="display: block text-center text-green-500
+                font-retro text-5xl pl-10 pr-10 ml-10 mr-10">
+            <p></p>
             <form onSubmit = {handleSubmit}>
-                <label>Choose your name:</label>
+                <div className="flex flex-col justify-center items-center space-y-5 h-screen">
+                <label>What is your name Hero?</label>
                 <input type='text' placeholder='Enter Name...' value={charName} onChange={handleChange}/>
                 <button type='submit'>Submit </button>
+                </div>
             </form>
         </div>
     )
