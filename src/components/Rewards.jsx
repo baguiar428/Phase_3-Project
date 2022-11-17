@@ -4,7 +4,7 @@ function Rewards ({reward, setReward}){
 
     return(
         <div onClick={()=>setReward(reward)}>
-              <div className="text-white flex justify-center">
+              <div className="text-white flex justify-center text-sm">
                 <table>
                     <thead>
                         <tr>

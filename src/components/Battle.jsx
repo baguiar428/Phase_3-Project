@@ -26,10 +26,10 @@ function Battle() {
     const statPercent = (heroStats-monsterStats)/monsterStats * 100
     // console.log(heroStats)
     // console.log(monsterStats)
-    console.log(statPercent)
+    // console.log(statPercent)
     // console.log(monster.defeated)
-    console.log(showVictory)
-    console.log(showDefeat)
+    // console.log(showVictory)
+    // console.log(showDefeat)
 
     function handleDice(){
         setDice(true)
