@@ -92,8 +92,7 @@ function ChooseClass (){
             body: JSON.stringify(hero)
         })
         .then(resp => resp.json())
-        .then(hero => setHero(hero))
-        .then(navigate('/maps', {state: {hero: hero}}))
+        .then(data => navigate('/maps', {state: {hero: data}}))
     }
 
     const characterMap = characterData.map(

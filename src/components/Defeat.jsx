@@ -10,8 +10,12 @@ function Defeat() {
 
     //save info to table?
     function playAgain(){
-        navigate('/')
-    }
+        fetch(`http://localhost:9292/heros/${location.state.hero.id}`,{
+            method: 'DELETE',
+        })
+        .then(resp=>resp.json())
+        .then(navigate('/'))
+   }
 
     return (
         <div className="font-retro">

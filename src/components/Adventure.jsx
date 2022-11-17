@@ -9,6 +9,7 @@ function Adventure(){
 
     const [currentMap, setCurrentMap] = useState([]);
     
+    console.log(location.state.hero)
     useEffect(() => {
         fetch(`http://localhost:9292/maps/${params.id}`)
         .then(resp => resp.json())

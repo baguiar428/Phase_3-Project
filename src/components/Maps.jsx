@@ -22,7 +22,7 @@ function Maps() {
   function stats() {
     navigate("/stats");
   }
-
+console.log(location.state.hero)
   //fetch map data
   useEffect(() => {
     fetch("http://localhost:9292/maps")
