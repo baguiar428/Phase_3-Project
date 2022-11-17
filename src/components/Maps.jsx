@@ -19,12 +19,12 @@ function Maps(){
     //interpolate img route
     const allMaps = mapData ? mapData.map((environment)=> 
     <div 
-    className="flex flex-col bg-black opacity-75 rounded-xl text-white text-center" 
+    className="w-full bg-black opacity-75 rounded-xl text-white text-center my-4 transform transition duration-500 hover:scale-110 m-5 " 
     onClick={()=>navigate(`/maps/${environment.id}`, {state: {currentHero: location.state.hero}})}
     >
         <span>{environment.name}</span>
             
-            <img className= "object-contain" src={require(`../assets/images/${environment.image_URL}.png`)} alt={environment.name}/>
+            <img className= "h-full w-full object-cover object-center rounded-xl inset-0 hover:-bottom-4" src={require(`../assets/images/${environment.image_URL}.png`)} alt={environment.name}/>
         </div>
         ) : null
 
@@ -34,7 +34,7 @@ function Maps(){
         <div className="font-retro">
             <h1 className="text-3xl text-white text-center">CHOOSE YOUR ADVENTURE!</h1>
             <br></br>
-            <div className="grid overflow-hidden grid-cols-2 grid-rows-3 gap-5 w-auto h-screen">{allMaps}</div>
+            <div className="container mx-auto grid grid-cols-3 grid-rows-2 gap-5 w-1/2 h-1/3">{allMaps}</div>
         </div>
     )
 
