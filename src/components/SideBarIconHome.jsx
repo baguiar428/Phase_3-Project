@@ -1,6 +1,6 @@
 import React from "react";
 
-function SideBarIcon({ icon, text = 'tool-tip' }) {
+function SideBarIconHome({ icon, text = 'Home' }) {
 return (
     <div className="sidebar-icon group">
     {icon}
@@ -12,4 +12,4 @@ return (
 )
 }
 
-export default SideBarIcon;
+export default SideBarIconHome;

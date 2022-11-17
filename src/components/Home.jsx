@@ -33,7 +33,7 @@ function Home() {
       />
       <div className="flex">
         <div onClick={about} className="flex-1">
-          <HomeIcon icon={<GrInfo size="140" />} />
+          <HomeIcon icon={<GrInfo size="140" />}/>
         </div>
         <div onClick={chooseName} className="flex-1">
           <HomeIcon icon={<GrGamepad size="140" />} />

@@ -1,7 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { GrHomeRounded, GrInfo } from "react-icons/gr";
-import SideBarIcon from "./SideBarIcon";
+import SideBarIconHome from "./SideBarIconHome";
+import SideBarIconAbout from "./SideBarIconAbout";
 
 function Leaderboard() {
   const navigate = useNavigate();
@@ -21,10 +22,10 @@ function Leaderboard() {
           bg-gray-900 text-white shadow-lg"
     >
       <div onClick={home}>
-        <SideBarIcon onClick={home} icon={<GrHomeRounded size="32" />} />
+        <SideBarIconHome onClick={home} icon={<GrHomeRounded size="32" />} />
       </div>
       <div onClick={about}>
-        <SideBarIcon onClick={about} icon={<GrInfo size="32" />} />
+        <SideBarIconAbout onClick={about} icon={<GrInfo size="32" />} />
       </div>
     </div>
   );
