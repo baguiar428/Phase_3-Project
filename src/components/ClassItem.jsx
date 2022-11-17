@@ -11,7 +11,7 @@ function ClassItem({character, name, setHero}){
             strength: character.str, 
             agility: character.agi,
             intellect: character.int,
-            img_url: character.img,
+            wins:0,
         })
     }
     

@@ -15,7 +15,7 @@ function ChooseClass (){
         strength: "", 
         agility: "",
         intellect: "",
-        wins: "",
+        wins: 0,
     })
 
     const characterData = 
