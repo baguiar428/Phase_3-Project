@@ -34,7 +34,7 @@ function About() {
         <br></br>
         <p><b className="text-red-500">STEP 3:</b> Choose your Adventure Map!</p>
 
-        <p>(The closer to Mount Doom the harder the fights!)</p>
+        <p>(The closer to Mount Doom or Diamond Depths the harder the fights!)</p>
         <br></br>
         <br></br>
         <p><b className="text-red-500">STEP 4:</b> Select which monster to battle</p>
