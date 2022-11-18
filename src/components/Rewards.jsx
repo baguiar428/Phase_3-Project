@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Rewards ({reward, setReward}){
 
+    const [selectColor, setSelectColor] = useState(false)
+
+    function handleClick() {
+        setReward(reward)
+        setSelectColor(!selectColor)
+    }
+
     return(
-        <div onClick={()=>setReward(reward)}>
-              <div className="bg-black hover:bg-blue-800 active:bg-red-500 focus:outline-none focus:ring focus:ring-white-300 text-white justify-center text-sm mx-6 bg-black rounded-xl px-24">
+        <div onClick={handleClick}>
+              <div className={`flex hover:bg-blue-800 focus:ring-blue-800 text-white justify-center text-sm mx-6 bg-black rounded-xl px-24} ${selectColor ? "bg-red-500" : "bg-black"} `}>
                 <table>
                     <thead>
                         <tr>
