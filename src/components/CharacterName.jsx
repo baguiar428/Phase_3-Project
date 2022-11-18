@@ -25,6 +25,9 @@ function CharacterName() {
     setCharName(e.target.value);
   }
 
+  function continueAdventure(){
+    navigate('/saved_games')
+  }
   return (
     <>
       <div
@@ -39,6 +42,15 @@ function CharacterName() {
           <SideBarIconAbout onClick={about} icon={<GrInfo size="32" />} />
         </div>
       </div>
+
+    
+      <div
+        className="display: block text-center text-red-500
+                  font-retro text-5xl pl-10 pr-10 ml-10 mr-10 hover:bg-blue-800"
+      >
+        <button onClick={continueAdventure}>Continue Adventure</button>
+      </div>
+
       <div
         className="display: block text-center text-green-500
                 font-retro text-5xl pl-10 pr-10 ml-10 mr-10"

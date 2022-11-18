@@ -11,11 +11,13 @@ import Battle from './components/Battle';
 import Victory from './components/Victory';
 import Defeat from './components/Defeat';
 import Stats from './components/Stats';
+import SavedGame from './components/SavedGame'
 
 function App() {
   return (
     <div className='h-screen bg-gray-700'>
       <Routes>
+        <Route path='saved_games' element={<SavedGame />}/>
         <Route path='/choose_name' element={<CharacterName/>}/>
         <Route path='/characters' element={<ChooseClass/>}/>
         <Route path='/about' element={<About/>}/>

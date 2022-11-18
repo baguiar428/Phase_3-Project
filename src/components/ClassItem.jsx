@@ -5,13 +5,13 @@ function ClassItem({character, name, setHero}){
     //save hero name, stats to state
     function chooseClass(){
         setHero({
-            id:'',
+            id: '',
             name: name,
             spec: character.spec,
             health: character.health,
-            strength: character.str, 
-            agility: character.agi,
-            intellect: character.int,
+            strength: character.strength, 
+            agility: character.agility,
+            intellect: character.intellect,
             wins:0,
         })
     }
