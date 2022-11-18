@@ -47,12 +47,13 @@ function Leaderboard() {
           <SideBarIconAbout onClick={about} icon={<GrInfo size="32" />} />
         </div>
       </div>
-      <div className = "font-retro text-3xl flex justify-center text-white">
+      <div className = "font-retro text-3xl flex justify-center">
       <table>
-          <thead>
+          <thead className="text-red-500">
             <tr>
-              <td>Name:</td>
-              <td>Wins</td>
+              <td>--Name</td>
+              <td>--</td>
+              <td>Wins--</td>
             </tr>
           </thead>
           <tbody>
