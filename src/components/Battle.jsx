@@ -54,13 +54,14 @@ function Battle() {
             <br></br>
             <div className="justify-center columns-2 px-20">
                 <div className=" bg-black rounded-xl opacity-75 text-white text-center px-10">
-                    <div>
-                        <span>{hero.spec}</span>
-                        <img className="object-scale-down h-28 w-full" src= {require(`../assets/images/${hero.spec}.gif`)} alt={hero.name}/>
+                    <div className="flex justify-evenly items-center space-y-5 h-1/3">
+                        <span>{hero.name}</span>
+                        <img className="flex flex-wrap justify-center items-center h-80 w-80" src= {require(`../assets/images/${hero.spec}.gif`)} alt={hero.name}/>
                     </div>
-                    <div>
+                    <br></br>
+                    <div className="flex justify-evenly items-center space-y-5 h-1/3">
+                        <img className="flex flex-wrap justify-center items-center h-80 w-80" src= {require(`../assets/images/${monster.image}.gif`)} alt={hero.name}/>
                         <span>{monster.name}</span>
-                        <img className="object-scale-down h-28 w-full" src= {require(`../assets/images/${monster.image}.gif`)} alt={hero.name}/>
                     </div>
                 </div>
             </div>
