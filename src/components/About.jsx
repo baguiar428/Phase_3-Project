@@ -34,15 +34,16 @@ function About() {
         <br></br>
         <p><b className="text-red-500">STEP 3:</b> Choose your Adventure Map!</p>
 
-        <p>(The closer to Mount Doom the harder the fights!)</p>
+        <p>(The closer to Mount Doom or Diamond Depths the harder the fights!)</p>
         <br></br>
         <br></br>
         <p><b className="text-red-500">STEP 4:</b> Select which monster to battle</p>
         <br></br>
         <br></br>
         <p><b className="text-red-500">STEP 5:</b> Roll the dice to attack the monster,</p>
-
         <p>if you win collect your loot and increase your stats</p>
+        <br></br>
+        <p><b className="text-red-500">STEP 6:</b> Select your next Adventure</p>
       </div>
       <div className="fixed top-0 left-0 h-screen w-16 m-0
           flex flex-col
