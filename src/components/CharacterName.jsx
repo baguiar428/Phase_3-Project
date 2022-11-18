@@ -46,9 +46,9 @@ function CharacterName() {
     
       <div
         className="display: block text-center text-red-500
-                  font-retro text-5xl pl-10 pr-10 ml-10 mr-10 pt-10 hover:bg-blue-800"
+                  font-retro text-5xl pl-10 pr-10 ml-10 mr-10 pt-10"
       >
-        <button onClick={continueAdventure}>Continue Adventure</button>
+        <button className="focus:ring-2 hover:bg-green-500  focus:ring-red-500" onClick={continueAdventure}>Continue Adventure</button>
       </div>
 
       <div
@@ -57,7 +57,7 @@ function CharacterName() {
       >
         <p></p>
         <form onSubmit={handleSubmit}>
-          <div className="flex flex-col justify-center items-center space-y-5 h-screen">
+          <div className="flex flex-col justify-center items-center space-y-5 pt-20">
             <label>What is your name, Hero?</label>
             <input
               className="text-black"
