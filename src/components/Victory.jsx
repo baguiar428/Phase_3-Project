@@ -37,23 +37,30 @@ function Victory() {
         }
 
     const rewardMap = location.state.monster.rewards.map((reward) => 
+        <div>
         <Rewards
             key={reward.id}
             reward={reward}
             setReward={setReward}
         />
+        </div >
+        
     )
 
     return (
         <div className="font-retro">
             <h1 className="text-3xl text-white text-center">VICTORY!</h1>
             <h2 className="text-2xl text-white text-center">Choose Your Reward:</h2>
-            <div className="flex">{rewardMap}</div>
             <br></br>
+            <div className="grid grid-cols-4 grid-rows-2 gap-3.5 grid-flow-row w-auto h-auto text-center pl-10 ml-10 mr-10 pr-10">{rewardMap}</div>
+            <br></br>
+            <br></br>
+            <div className="flex justify-center">
             <button 
                 className="bg-black opacity-75 border-2 rounded text-red-500" 
                 onClick={continueAdventure}
             > CONTINUE </button>
+        </div>
         </div>
     )
 }
