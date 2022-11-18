@@ -26,9 +26,9 @@ function Leaderboard() {
   const highScores = leaderBoard ? leaderBoard.map((leader) => {
     return (
     <tr>
-      <td>{leader.name}</td>
-      <td></td>
-      <td>{leader.wins}</td>
+      <td className="text-center">{leader.name}</td>
+      <td className="text-yellow-500">----</td>
+      <td className="text-center">{leader.wins}</td>
     </tr>
   
   )}) : null
@@ -47,13 +47,13 @@ function Leaderboard() {
           <SideBarIconAbout onClick={about} icon={<GrInfo size="32" />} />
         </div>
       </div>
-      <div className = "font-retro text-3xl flex justify-center">
+      <div className = "font-retro text-3xl flex justify-center pt-20">
       <table>
-          <thead className="text-red-500">
+          <thead>
             <tr>
-              <td>--Name</td>
-              <td>--</td>
-              <td>Wins--</td>
+              <td className="px-10 pb-5 text-red-500">Name</td>
+              <td></td>
+              <td className="px-10 pb-5 text-green-500">Wins</td>
             </tr>
           </thead>
           <tbody>
