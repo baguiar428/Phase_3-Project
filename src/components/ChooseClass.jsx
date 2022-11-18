@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import {useLocation, useNavigate} from 'react-router-dom'
 import ClassItem from './ClassItem'
-import { GrHomeRounded, GrInfo, GrTime } from "react-icons/gr";
+import { GrHomeRounded, GrInfo } from "react-icons/gr";
 import SideBarIconHome from "./SideBarIconHome";
 import SideBarIconAbout from "./SideBarIconAbout";
-import SideBarIconStats from "./SideBarIconStats";
+// import SideBarIconStats from "./SideBarIconStats";
 
 //import characterData 
 
@@ -18,9 +18,9 @@ function ChooseClass (){
         navigate("/about");
       }
     
-      function stats() {
-        navigate("/stats");
-      }
+    //   function stats() {
+    //     navigate("/stats");
+    //   }
     
 
     const location = useLocation();
@@ -43,41 +43,41 @@ function ChooseClass (){
             id:1,
             spec: "Warrior",
             health: 35,
-            str: 9,
-            agi: 3,
-            int: 1,
+            strength: 9,
+            agility: 3,
+            intellect: 1,
         },
         {   
             id:2,
             spec: "Mage",
             health: 25,
-            str: 2,
-            agi: 3,
-            int: 10,    
+            strength: 2,
+            agility: 3,
+            intellect: 10,    
         },
         {   
             id:3,
             spec:"Archer",
             health: 20,
-            str: 5,
-            agi: 9,
-            int: 2,
+            strength: 5,
+            agility: 9,
+            intellect: 2,
         },
         {   
             id:4,
             spec: "Rogue",
             health: 25,
-            str: 2,
-            agi: 8,
-            int: 5,  
+            strength: 2,
+            agility: 8,
+            intellect: 5,  
         },
         {   
             id:5,
             spec: "Amazonian",
             health: 30,
-            str: 7,
-            agi: 5,
-            int: 2,
+            strength: 7,
+            agility: 5,
+            intellect: 2,
         }
     ]
     
