@@ -26,7 +26,7 @@ function SavedGame(){
     const characterMap = saveData.map(
         (character) => 
             <> 
-                <div className="bg-gradient-to-r from-black to-blue-700 rounded-xl opacity-75 text-white text-center text-5xl" 
+                <div className="bg-gradient-to-r from-black to-blue-700 rounded-xl opacity-75 text-white text-center text-4xl" 
                     onClick={ ()=>   
                         setHero({
                             id: character.id,
