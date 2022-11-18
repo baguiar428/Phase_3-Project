@@ -42,7 +42,7 @@ function ChooseClass (){
         {   
             id:1,
             spec: "Warrior",
-            health: 35,
+            health: 60,
             strength: 9,
             agility: 3,
             intellect: 1,
@@ -50,7 +50,7 @@ function ChooseClass (){
         {   
             id:2,
             spec: "Mage",
-            health: 25,
+            health: 50,
             strength: 2,
             agility: 3,
             intellect: 10,    
@@ -58,7 +58,7 @@ function ChooseClass (){
         {   
             id:3,
             spec:"Archer",
-            health: 20,
+            health: 45,
             strength: 5,
             agility: 9,
             intellect: 2,
@@ -66,7 +66,7 @@ function ChooseClass (){
         {   
             id:4,
             spec: "Rogue",
-            health: 25,
+            health: 50,
             strength: 2,
             agility: 8,
             intellect: 5,  
@@ -74,7 +74,7 @@ function ChooseClass (){
         {   
             id:5,
             spec: "Amazonian",
-            health: 30,
+            health: 55,
             strength: 7,
             agility: 5,
             intellect: 2,

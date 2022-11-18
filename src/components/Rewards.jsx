@@ -13,19 +13,19 @@ function Rewards ({reward, setReward}){
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Health Boost: </td>
+                            <td>Health: </td>
                             <td className='text-green-500'> {reward.health_boost}</td>
                         </tr>
                         <tr>
-                            <td>Strength Boost: </td>
+                            <td>Strength: </td>
                             <td className='text-green-500'> {reward.strength_boost}</td>
                         </tr>
                         <tr>
-                            <td>Agility Boost: </td>
+                            <td>Agility: </td>
                             <td className='text-green-500'> {reward.agility_boost}</td>
                         </tr>
                         <tr>
-                            <td>Intellect Boost: </td>
+                            <td>Intellect: </td>
                             <td className='text-green-500'> {reward.intellect_boost}</td>
                         </tr>
                     </tbody>

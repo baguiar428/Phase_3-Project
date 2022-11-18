@@ -41,7 +41,7 @@ function SavedGame(){
                     }
                 >
                     <div>
-                        <span>{character.spec}</span>
+                        <span>{character.name}</span>
                         <img className="object-scale-down h-20 w-full" src= {require(`../assets/images/${character.spec}.gif`)} alt={character.name}/>
                     </div>
                 </div>
