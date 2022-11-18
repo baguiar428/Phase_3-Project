@@ -1,21 +1,36 @@
-import React from "react";
+import React, {useState} from "react";
 import { useNavigate, useLocation} from 'react-router-dom'
 import skull from "../assets/images/skull.png";
 
 function Defeat() {
     const navigate = useNavigate();
     const location = useLocation();
+    const [hero, setHero] = useState(location.state.hero)
 
     // console.log(location.state.hero)
     // console.log(location.state.monster.defeated)
 
     //save info to table?
+
     function playAgain(){
-        fetch(`http://localhost:9292/heros/${location.state.hero.id}`,{
+        fetch('http://localhost:9292/champions', {
+            method: 'POST',
+            headers: {
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify({
+                name: hero.name,
+                spec: hero.spec,
+                wins: hero.wins
+            })
+        })
+        .then(resp => resp.json())
+        .then(data => console.log(data))
+        .then(fetch(`http://localhost:9292/heros/${location.state.hero.id}`,{
             method: 'DELETE',
         })
         .then(resp=>resp.json())
-        .then(navigate('/'))
+        .then(navigate('/')))
    }
 
     return (

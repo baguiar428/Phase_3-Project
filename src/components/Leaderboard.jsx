@@ -17,7 +17,7 @@ function Leaderboard() {
   }
 
   useEffect(()=>{
-    fetch('http://localhost:9292/heros')
+    fetch('http://localhost:9292/champions')
     .then(resp => resp.json())
     .then(data => setLeaderBoard(data))
   },[])
