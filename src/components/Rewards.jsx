@@ -4,7 +4,7 @@ function Rewards ({reward, setReward}){
 
     return(
         <div onClick={()=>setReward(reward)}>
-              <div className="bg-black hover:bg-blue-800 active:bg-red-500 focus:outline-none focus:ring focus:ring-white-300 text-white justify-center text-sm mx-6 bg-black rounded-xl px-24">
+              <div className="bg-black hover:bg-blue-800 active:bg-red-500 focus:outline-none focus:ring focus:ring-white-300 text-white justify-center text-sm mx-6 rounded-xl px-24">
                 <table>
                     <thead>
                         <tr>

@@ -56,11 +56,40 @@ function Victory() {
             <br></br>
             <br></br>
             <div className="flex justify-center">
-            <button 
-                className="bg-black opacity-75 border-2 rounded text-red-500" 
-                onClick={continueAdventure}
-            > CONTINUE </button>
-        </div>
+            <table>
+                    <thead>
+                        <tr>
+                            <td className='text-center text-green-500'>{chooseReward.item_name}</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Health: </td>
+                            <td className='text-green-500'> {chooseReward.health_boost}</td>
+                        </tr>
+                        <tr>
+                            <td>Strength: </td>
+                            <td className='text-green-500'> {chooseReward.strength_boost}</td>
+                        </tr>
+                        <tr>
+                            <td>Agility: </td>
+                            <td className='text-green-500'> {chooseReward.agility_boost}</td>
+                        </tr>
+                        <tr>
+                            <td>Intellect: </td>
+                            <td className='text-green-500'> {chooseReward.intellect_boost}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br></br>
+            </div>
+            <br></br>
+            <div className="flex justify-center">
+                <button 
+                    className="bg-black opacity-75 border-2 rounded text-red-500" 
+                    onClick={continueAdventure}
+                > CONTINUE </button>
+            </div>
         </div>
     )
 }
