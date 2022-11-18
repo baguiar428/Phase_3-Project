@@ -46,7 +46,7 @@ function CharacterName() {
     
       <div
         className="display: block text-center text-red-500
-                  font-retro text-5xl pl-10 pr-10 ml-10 mr-10 hover:bg-blue-800"
+                  font-retro text-5xl pl-10 pr-10 ml-10 mr-10 pt-10 hover:bg-blue-800"
       >
         <button onClick={continueAdventure}>Continue Adventure</button>
       </div>
