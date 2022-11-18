@@ -49,10 +49,10 @@ function Victory() {
 
     return (
         <div className="font-retro">
-            <h1 className="text-3xl text-yellow-500 text-center pt-20">VICTORY!</h1>
+            <h1 className="text-3xl text-yellow-500 text-center pt-20 pb-5">VICTORY!</h1>
             <h2 className="text-2xl text-white text-center">Choose Your Reward:</h2>
             <br></br>
-            <div className=" grid grid-cols-4 grid-rows-2 gap-3.5 grid-flow-row w-auto h-auto text-center pl-10 ml-10 mr-10 pr-10">{rewardMap}</div>
+            <div className=" flex w-auto h-auto text-center pl-10 ml-10 mr-10 pr-10">{rewardMap}</div>
             <br></br>
             <br></br>
             <div className="flex justify-center">
