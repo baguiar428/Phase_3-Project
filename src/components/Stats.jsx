@@ -40,6 +40,13 @@ function Stats() {
         <SideBarIconAbout onClick={about} icon={<GrInfo size="32" />} />
       </div>
     </div>
+    <div className="display: block text-center text-green-500 
+                  font-retro text-5xl pl-10 pr-10 ml-10 mr-10">
+        <br></br>
+        <br></br>
+        <h1>Stats:</h1>
+        <br></br>
+      </div>
     <div className="font-retro">
       <img className="object-scale-down h-28 w-full" src= {require(`../assets/images/${heroData.spec}.gif`)} alt={heroData.name}/>
       <div className="text-white flex justify-center">
@@ -80,6 +87,11 @@ function Stats() {
             className="bg-black opacity-75 border-2 rounded text-red-500" 
             onClick={backToMap}
           > BACK TO MAP </button>
+          <br></br>
+          <br></br>
+          <br></br>
+          <h1 className="display: block text-center text-green-500 
+                  font-retro text-3xl pl-10 pr-10 ml-10 mr-10">Greater foes await you...</h1>
         </div>
         </div>
       
