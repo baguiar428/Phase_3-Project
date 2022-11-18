@@ -17,10 +17,10 @@ function ClassItem({character, name, setHero}){
     }
     
     return(
-        <div className=" bg-black rounded-xl opacity-75 text-white text-center px-10" onClick={chooseClass}>
+        <div className=" bg-gradient-to-r from-black to-blue-700 rounded-xl opacity-85 text-green-500 text-center text-4xl mr-4 transition duration-500 hover:scale-110" onClick={chooseClass}>
             <div>
                 <span>{character.spec}</span>
-                <img className="object-scale-down h-20 w-full" src= {require(`../assets/images/${character.spec}.gif`)} alt={character.name}/>
+                <img className="object-scale-down h-80 w-full" src= {require(`../assets/images/${character.spec}.gif`)} alt={character.name}/>
             </div>
         </div>
     )

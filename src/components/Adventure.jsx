@@ -18,7 +18,7 @@ function Adventure(){
     const allMonsters = currentMap.monsters ? currentMap.monsters.map((monster) => 
         <div onClick={()=> navigate("/battle", {state: {hero: location.state.hero, monster: monster}})}>
             <span className="font-retro text-justify text-green-500 ">{monster.name}</span>
-            <img className="w-96 bg-gradient-to-r from-black to-blue-500 opacity-90 rounded-xl transform transition my-10 duration-500 hover:scale-150 pl-16 ml-28 mt-28" src={require(`../assets/images/${monster.image}.gif`)} alt={monster.name}
+            <img className="w-96 bg-gradient-to-r from-black to-blue-700 opacity-85 rounded-xl transform transition my-10 duration-500 hover:scale-150 pl-16 ml-28 mt-28" src={require(`../assets/images/${monster.image}.gif`)} alt={monster.name}
             />
             </div>) 
         : null;
