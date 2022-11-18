@@ -25,6 +25,7 @@ function Leaderboard() {
   console.log(leaderBoard)
   const highScores = leaderBoard ? leaderBoard.map((leader) => {
     return (
+      
     <tr>
       <td className="text-center">{leader.name}</td>
       <td className="text-yellow-500">----</td>

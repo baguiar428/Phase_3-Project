@@ -31,7 +31,7 @@ function Defeat() {
         })
         .then(resp=>resp.json())
         .then(navigate('/')))
-   }
+    }
 
     return (
         <div className="font-retro display: block ml-auto mr-auto text-center">
